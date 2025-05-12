@@ -7,8 +7,15 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-</head>
-<body>
+    
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXXXX');
+    </script>
+       <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
     <header>
         <h1>Welcome to My Interactive Blog</h1>
         <nav>
@@ -42,18 +49,15 @@
         </section>
         <section id="video" class="page" style="display:none;">
             <h2>Watch Our Latest Video</h2>
-            <video controls>
-                <source src="https://www.youtube.com/watch?v=TlLmve5I67o" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <p><a href="https://www.youtube.com/watch?v=TlLmve5I67o" download>Download Sample Video</a></p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/TlLmve5I67o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p><a href="sample-video.mp4" download>Download Sample Video</a></p>
         </section>
         <section id="carousel" class="page" style="display:none;">
             <h2>Image Carousel</h2>
             <div class="carousel">
-                <img src="https://www.pixelstalk.net/wp-content/uploads/2016/09/Best-Beautiful-Images-For-Desktop-Nature.png" alt="Image 1">
-                <img src="https://media.cntraveller.com/photos/611bf3f2c15cf5da489ed4b9/master/w_1600%2Cc_limit/3adventure.jpg" alt="Image 2">
-                <img src="https://www.pixelstalk.net/wp-content/uploads/2016/09/Best-Beautiful-Images-For-Desktop-Nature.png" alt="Image 3">
+                <img src="Website/assets/images/img1.jpg" alt="Image 1">
+                <img src="Website/assets/images/img2.png" alt="Image 2">
+                <img src="Website/assets/images/img3.jpg" alt="Image 3">
             </div>
             <button onclick="prevImage()">Previous</button>
             <button onclick="nextImage()">Next</button>
