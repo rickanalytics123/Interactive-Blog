@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Interactive Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Interactive Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showPage('home')">Home</a></li>
+                <li><a href="#" onclick="showPage('subscribe')">Subscribe</a></li>
+                <li><a href="#" onclick="showPage('video')">Video</a></li>
+                <li><a href="#" onclick="showPage('carousel')">Carousel</a></li>
+                <li><a href="#" onclick="showPage('map')">Map</a></li>
+                <li><a href="#" onclick="showPage('chatbot')">Chatbot</a></li>
+                <li><a href="#" onclick="showPage('quiz')">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="page">
+            <h2>Home</h2>
+            <p>Welcome to the home page of my interactive blog. Navigate through the menu to explore various features.</p>
+        </section>
+        <section id="subscribe" class="page" style="display:none;">
+            <h2>Subscribe to Our Newsletter</h2>
+            <form id="subscribe-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="file">Attach a file:</label>
+                <input type="file" id="file" name="file">
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+        <section id="video" class="page" style="display:none;">
+            <h2>Watch Our Latest Video</h2>
+            <video controls>
+                <source src="Website/assets/images/img3.jpg" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p><a href="sample-video.mp4" download>Download Sample Video</a></p>
+        </section>
+        <section id="carousel" class="page" style="display:none;">
+            <h2>Image Carousel</h2>
+            <div class="carousel">
+                <img src="Website/assets/images/img1.jpg" alt="Image 1">
+                <img src="Website/assets/images/img2.png" alt="Image 2">
+                <img src="Website/assets/images/img3.jpg" alt="Image 3">
+            </div>
+            <button onclick="prevImage()">Previous</button>
+            <button onclick="nextImage()">Next</button>
+        </section>
+        <section id="map" class="page" style="display:none;">
+            <h2>Interactive Map</h2>
+            <div id="map-container" style="width: 100%; height: 400px;"></div>
+        </section>
+        <section id="chatbot" class="page" style="display:none;">
+            <h2>Chat with Us</h2>
+            <div id="chatbot-container"></div>
+        </section>
+        <section id="quiz" class="page" style="display:none;">
+            <h2>Interactive Quiz</h2>
+            <div id="quiz-container">
+                <p>Question: What is the capital of France?</p>
+                <button onclick="checkAnswer('Paris')">Paris</button>
+                <button onclick="checkAnswer('London')">London</button>
+                <button onclick="checkAnswer('Berlin')">Berlin</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 My Interactive Blog. Made By Rick.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
